@@ -72,10 +72,10 @@ jobs:
             daemon_off: false
             dockerfile: ./Dockerfile
             context: ./
-    DeployToEKS:
-     needs: BUILD_AND_PUBLISH
-     runs-on: ubuntu-latest
-     steps:
+  DeployToEKS:
+    needs: BUILD_AND_PUBLISH
+    runs-on: ubuntu-latest
+    steps:
        - name: Code checkout
          uses: actions/checkout@v4
 
